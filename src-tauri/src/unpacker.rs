@@ -34,8 +34,8 @@ struct Manifest {
 pub async fn unpack() -> Result<(), Error> {
     let chunk_size: u64 = 1024 * 1024 * 16;
 
-    let input = Path::new("/home/decduck/Dev/droplet-output");
-    let output = Path::new("/home/decduck/Dev/droplet-rebuilt");
+    let input = Path::new("/tmp/droplet-dev-output");
+    let output = Path::new("/tmp/droplet-dev-rebuilt");
 
     let manifest_path = input.join("manifest.drop");
     let manifest_file_handle = File::open(manifest_path).unwrap();
